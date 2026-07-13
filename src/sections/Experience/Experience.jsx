@@ -20,9 +20,9 @@ export default function Experience() {
   return (
     <section id="experience" className="experience-section section-container">
       <SectionHeader 
-        number="03 // PATHWAY" 
-        title="Professional Pathway" 
-        subtitle="Chronology of professional experience and academic credentials detailing development sprints and architectures." 
+        number="03" 
+        title="Work & Education" 
+        subtitle="My professional career trajectory and academic credentials." 
       />
 
       <div className="timeline-container">
@@ -57,10 +57,10 @@ export default function Experience() {
         ))}
       </div>
 
-      {/* Academic Credentials timeline block */}
+       {/* Academic Credentials timeline block */}
       <div style={{ marginTop: '64px' }}>
         <h3 className="timeline-role" style={{ fontSize: '1.25rem', fontFamily: 'var(--font-sans)', color: 'var(--accent-primary)', marginBottom: '32px', textTransform: 'uppercase', display: 'flex', alignItems: 'center', gap: '16px' }}>
-          <span style={{ fontFamily: 'monospace', letterSpacing: '0.05em' }}>// ACADEMIC_CREDENTIALS</span>
+          <span style={{ letterSpacing: '0.05em' }}>Education</span>
         </h3>
         
         <div className="timeline-container">

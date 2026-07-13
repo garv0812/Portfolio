@@ -33,13 +33,13 @@ export default function Contact() {
   };
 
   const sendLogs = [
-    "Reading local payload variables...",
-    "Converting payload body to GZIP buffer...",
-    "Initiating Secure TLS handshake with server gateway...",
-    "Injecting ephemeral Anti-CSRF verification tokens...",
-    "Posting request block to REST endpoint (SSL-Grade)...",
-    "Awaiting response acknowledgement packet...",
-    "STATUS Code: 202 ACCEPTED."
+    "Preparing email payload...",
+    "Validating fields and address route...",
+    "Connecting to email service API...",
+    "Encrypting connection protocol...",
+    "Delivering message packet...",
+    "Awaiting gateway receipt...",
+    "Message successfully delivered!"
   ];
 
   const handleSubmit = async (e) => {
@@ -144,9 +144,9 @@ export default function Contact() {
   return (
     <section id="contact" className="contact-section section-container">
       <SectionHeader 
-        number="05 // TRANSMIT" 
-        title="Initialize Transmission" 
-        subtitle="Establish secure communications. Send network payload queries or query availability metrics." 
+        number="05" 
+        title="Contact Me" 
+        subtitle="Feel free to reach out for collaborations, job opportunities, or just to say hello!" 
       />
 
       <div className="contact-grid">
@@ -155,7 +155,7 @@ export default function Contact() {
           {transmissionStatus === 'idle' && (
             <form onSubmit={handleSubmit} className="transmission-form" noValidate>
               <div className="form-group">
-                <label className="form-label" htmlFor="form-name">Sender Ident (Name)</label>
+                <label className="form-label" htmlFor="form-name">Your Name</label>
                 <input 
                   type="text" 
                   id="form-name"
@@ -170,7 +170,7 @@ export default function Contact() {
               </div>
 
               <div className="form-group">
-                <label className="form-label" htmlFor="form-email">Route Address (Email)</label>
+                <label className="form-label" htmlFor="form-email">Your Email</label>
                 <input 
                   type="email" 
                   id="form-email"
@@ -178,21 +178,21 @@ export default function Contact() {
                   value={formData.email}
                   onChange={handleInputChange}
                   className="form-input" 
-                  placeholder="e.g. sender@domain.com"
+                  placeholder="e.g. johndoe@domain.com"
                   aria-invalid={errors.email ? "true" : "false"}
                 />
                 {errors.email && <span style={{ color: '#ef4444', fontSize: '0.75rem', fontFamily: 'monospace' }}>{errors.email}</span>}
               </div>
 
               <div className="form-group">
-                <label className="form-label" htmlFor="form-message">Payload (Message)</label>
+                <label className="form-label" htmlFor="form-message">Your Message</label>
                 <textarea 
                   id="form-message"
                   name="message" 
                   value={formData.message}
                   onChange={handleInputChange}
                   className="form-input form-textarea" 
-                  placeholder="Define your transmission request guidelines..."
+                  placeholder="Type your message here..."
                   aria-invalid={errors.message ? "true" : "false"}
                 ></textarea>
                 {errors.message && <span style={{ color: '#ef4444', fontSize: '0.75rem', fontFamily: 'monospace' }}>{errors.message}</span>}
@@ -200,12 +200,12 @@ export default function Contact() {
 
               {errors.submit && (
                 <div style={{ color: '#ef4444', fontSize: '0.8rem', fontFamily: 'monospace', padding: '8px 12px', background: 'rgba(239, 68, 68, 0.08)', border: '1px solid rgba(239, 68, 68, 0.15)', borderRadius: '4px', maxWidth: '100%' }}>
-                  ERR // {errors.submit.toUpperCase()}
+                  Error: {errors.submit}
                 </div>
               )}
 
               <button type="submit" className="btn-primary" style={{ alignSelf: 'flex-start' }}>
-                SEND_PAYLOAD
+                Send Message
                 <Send size={16} />
               </button>
             </form>
@@ -219,7 +219,7 @@ export default function Contact() {
                 </div>
               ))}
               <div className="transmission-log-entry">
-                Transmitting packets...<span className="terminal-cursor" style={{ marginLeft: '6px' }}></span>
+                Sending message...<span className="terminal-cursor" style={{ marginLeft: '6px' }}></span>
               </div>
             </div>
           )}
@@ -228,19 +228,19 @@ export default function Contact() {
             <div className="transmission-console" style={{ borderColor: '#10b981' }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: '8px', color: '#10b981', fontWeight: 'bold', fontSize: '0.9rem', marginBottom: '8px' }}>
                 <CheckCircle size={18} />
-                <span>TRANSMISSION COMPLETE</span>
+                <span>Message Sent Successfully</span>
               </div>
-              <div className="transmission-log-entry">STATUS: Sent with absolute integrity.</div>
-              <div className="transmission-log-entry">HASH: {generateHash()}</div>
+              <div className="transmission-log-entry">Status: Sent successfully.</div>
+              <div className="transmission-log-entry">Receipt Hash: {generateHash()}</div>
               <div className="transmission-log-entry" style={{ color: 'var(--text-secondary)', marginTop: '8px' }}>
-                Thank you. The recipient has been notified, and will respond shortly on your return route address.
+                Thank you! Your message has been delivered. I will respond to your email address as soon as possible.
               </div>
               <button 
                 onClick={() => setTransmissionStatus('idle')} 
                 className="terminal-run-btn"
                 style={{ width: 'fit-content', marginTop: '16px' }}
               >
-                START NEW CONSOLE
+                Send Another Message
               </button>
             </div>
           )}
@@ -249,7 +249,7 @@ export default function Contact() {
         {/* Quick Connect Sidebar */}
         <div className="connect-info">
           <div className="connect-card glass-panel">
-            <h4 className="connect-card-title">// Identity Indices</h4>
+            <h4 className="connect-card-title">Contact Information</h4>
             
             <div className="info-item">
               <Mail size={16} className="info-icon" />
@@ -263,7 +263,7 @@ export default function Contact() {
           </div>
 
           <div className="connect-card glass-panel">
-            <h4 className="connect-card-title">// External Nodes</h4>
+            <h4 className="connect-card-title">Find Me On</h4>
             
             <div className="social-links-grid">
               <a 
@@ -274,7 +274,7 @@ export default function Contact() {
                 aria-label="Connect on GitHub"
               >
                 <BrandIcon name="github" size={16} />
-                GITHUB
+                GitHub
               </a>
               <a 
                 href={personalInfo.linkedin} 
@@ -284,7 +284,7 @@ export default function Contact() {
                 aria-label="Connect on LinkedIn"
               >
                 <BrandIcon name="linkedin" size={16} />
-                LINKEDIN
+                LinkedIn
               </a>
             </div>
           </div>

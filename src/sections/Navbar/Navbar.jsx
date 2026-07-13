@@ -9,9 +9,9 @@ export default function Navbar() {
   const navItems = [
     { label: 'Home', href: '#home', id: 'home', icon: <Home size={18} /> },
     { label: 'Skills', href: '#skills', id: 'skills', icon: <Cpu size={18} /> },
-    { label: 'Pathway', href: '#experience', id: 'experience', icon: <Briefcase size={18} /> },
-    { label: 'Works', href: '#work', id: 'work', icon: <Folder size={18} /> },
-    { label: 'Transmit', href: '#contact', id: 'contact', icon: <Send size={18} /> }
+    { label: 'Experience', href: '#experience', id: 'experience', icon: <Briefcase size={18} /> },
+    { label: 'Projects', href: '#work', id: 'work', icon: <Folder size={18} /> },
+    { label: 'Contact', href: '#contact', id: 'contact', icon: <Send size={18} /> }
   ];
 
   useEffect(() => {
@@ -53,7 +53,7 @@ export default function Navbar() {
                 href={item.href} 
                 className={`nav-link ${activeSection === item.id ? 'active' : ''}`}
               >
-                // {item.label.toUpperCase()}
+                {item.label}
               </a>
             ))}
           </div>

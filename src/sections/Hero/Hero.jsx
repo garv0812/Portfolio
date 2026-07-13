@@ -24,17 +24,17 @@ export default function Hero() {
           
           <div className="hero-buttons">
             <a href="#work" className="btn-primary">
-              INITIALIZE WORK.BAT
+              View My Projects
               <ArrowUpRight size={16} />
             </a>
             <a href="#contact" className="btn-secondary">
-              TRANSMIT LOG
+              Get in Touch
               <Terminal size={16} />
             </a>
           </div>
           
           <div>
-            <h3 className="stack-tags-title">// Core Stack</h3>
+            <h3 className="stack-tags-title">Core Tech Stack</h3>
             <div className="stack-tags">
               {coreStack.map(tag => (
                 <div key={tag} className="stack-tag">

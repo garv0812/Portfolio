@@ -11,9 +11,9 @@ export default function Projects() {
   return (
     <section id="work" className="projects-section section-container">
       <SectionHeader 
-        number="04 // WORKS" 
-        title="Selected Works" 
-        subtitle="A collection of production-grade systems and open-source packages engineered for maximum throughput and structural cleanliness." 
+        number="04" 
+        title="Featured Projects" 
+        subtitle="A selection of web applications and backend projects I have built." 
       />
 
       {/* Featured Project Spotlight */}
@@ -51,7 +51,7 @@ export default function Projects() {
               aria-label={`View code for ${featured.title} on GitHub`}
             >
               <BrandIcon name="github" size={16} />
-              SOURCE_CODE
+              View on GitHub
             </a>
             <a 
               href={featured.demoUrl} 
@@ -61,14 +61,14 @@ export default function Projects() {
               aria-label={`Launch live demo for ${featured.title}`}
             >
               <ExternalLink size={16} />
-              LIVE_DEMO
+              Live Demo
             </a>
           </div>
         </div>
 
         {/* High-Fidelity Infrastructure Schematic */}
         <div className="featured-schematic">
-          <div className="schematic-title">// Topology Spec v1.0</div>
+          <div className="schematic-title">System Architecture Overview</div>
           
           <div className="schematic-nodes">
             <div className="schema-node gateway">

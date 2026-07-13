@@ -24,9 +24,9 @@ export default function Skills() {
   return (
     <section id="skills" className="skills-section section-container">
       <SectionHeader 
-        number="02 // TECH_ARSENAL" 
-        title="Technical Arsenal" 
-        subtitle="Categorized frameworks, protocols, and architectural models engineered to deliver speed and resilience." 
+        number="02" 
+        title="Skills & Tech" 
+        subtitle="Languages, frameworks, databases, and tools I use to build scalable web applications." 
       />
 
       <div className="skills-grid">

@@ -2,12 +2,12 @@ import React, { useState, useEffect } from 'react';
 import './Footer.css';
 
 export default function Footer() {
-  const [timestamp, setTimestamp] = useState(new Date().toISOString());
+  const [localTime, setLocalTime] = useState(() => new Date().toLocaleTimeString());
 
-  // Update server telemetry clock
+  // Update local time clock
   useEffect(() => {
     const timer = setInterval(() => {
-      setTimestamp(new Date().toISOString());
+      setLocalTime(new Date().toLocaleTimeString());
     }, 1000);
     return () => clearInterval(timer);
   }, []);
@@ -16,30 +16,19 @@ export default function Footer() {
     <footer className="footer-wrapper">
       <div className="footer-container section-container" style={{ padding: '0 24px' }}>
         <div className="footer-copyright">
-          © {new Date().getFullYear()} <span>ARCHITECT.DEV</span>. All pipelines nominal.
+          © {new Date().getFullYear()} <span>GARV YADAV</span>. All rights reserved.
         </div>
 
-        {/* Server status & telemetry metadata */}
+        {/* Local timezone & clock telemetry */}
         <div className="footer-telemetry">
           <div className="telemetry-item">
-            <span className="label">STATUS:</span>
-            <span className="telemetry-status-dot"></span>
-            <span className="value" style={{ color: '#10b981' }}>ACTIVE</span>
+            <span className="label">Location:</span>
+            <span className="value">Ahmedabad, India</span>
           </div>
 
           <div className="telemetry-item">
-            <span className="label">UPTIME:</span>
-            <span className="value">99.998%</span>
-          </div>
-
-          <div className="telemetry-item">
-            <span className="label">LATENCY:</span>
-            <span className="value">42ms</span>
-          </div>
-
-          <div className="telemetry-item">
-            <span className="label">LOG_TIME:</span>
-            <span className="value" style={{ fontSize: '0.7rem' }}>{timestamp}</span>
+            <span className="label">Local Time:</span>
+            <span className="value">{localTime}</span>
           </div>
         </div>
       </div>
