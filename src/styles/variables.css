@@ -1,0 +1,61 @@
+/* CSS Variables for ARCHITECT.DEV Theme System */
+
+:root {
+  /* Common variables */
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --transition-speed: 0.3s;
+  --transition-smooth: all var(--transition-speed) cubic-bezier(0.4, 0, 0.2, 1);
+  --border-radius-sm: 4px;
+  --border-radius-md: 8px;
+  --border-radius-lg: 16px;
+  
+  /* Dark Theme variables (Default) */
+  --bg-primary: #031427;
+  --bg-secondary: #06192e;
+  --bg-tertiary: #0b223c;
+  --border-color: rgba(255, 255, 255, 0.08);
+  --border-color-hover: rgba(99, 102, 241, 0.3);
+  
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+  --text-muted: #64748b;
+  
+  --accent-primary: #6366f1; /* Electric Indigo */
+  --accent-secondary: #3b82f6; /* Cyber Blue */
+  --accent-rgb: 99, 102, 241;
+  --accent-glow: rgba(99, 102, 241, 0.15);
+  
+  --glass-bg: rgba(6, 25, 46, 0.75);
+  --glass-border: rgba(255, 255, 255, 0.07);
+  --glass-shadow: rgba(0, 0, 0, 0.4);
+  
+  --grid-line-color: rgba(99, 102, 241, 0.035);
+  
+  --status-available: #10b981;
+}
+
+[data-theme="light"] {
+  /* Light Theme variables */
+  --bg-primary: #f8fafc;
+  --bg-secondary: #ffffff;
+  --bg-tertiary: #f1f5f9;
+  --border-color: rgba(15, 23, 42, 0.08);
+  --border-color-hover: rgba(99, 102, 241, 0.4);
+  
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --text-muted: #94a3b8;
+  
+  --accent-primary: #4f46e5; /* Deeper Electric Indigo */
+  --accent-secondary: #2563eb; /* Cyber Blue */
+  --accent-rgb: 79, 70, 229;
+  --accent-glow: rgba(79, 70, 229, 0.1);
+  
+  --glass-bg: rgba(255, 255, 255, 0.75);
+  --glass-border: rgba(15, 23, 42, 0.06);
+  --glass-shadow: rgba(15, 23, 42, 0.05);
+  
+  --grid-line-color: rgba(79, 70, 229, 0.025);
+  
+  --status-available: #10b981;
+}

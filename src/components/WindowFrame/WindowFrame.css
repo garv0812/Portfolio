@@ -1,0 +1,194 @@
+/* Window Frame IDE Component Styles */
+
+.window-container {
+  width: 100%;
+  max-width: 680px;
+  min-height: 380px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-lg);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+  font-family: 'Courier New', Courier, monospace;
+  display: flex;
+  flex-direction: column;
+  transition: var(--transition-smooth);
+}
+
+.window-header {
+  height: 42px;
+  background: var(--bg-tertiary);
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+  user-select: none;
+}
+
+.window-controls {
+  display: flex;
+  gap: 8px;
+}
+
+.window-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--text-muted);
+  opacity: 0.6;
+  transition: opacity 0.2s ease;
+}
+
+.window-dot.close { background: #ef4444; }
+.window-dot.minimize { background: #eab308; }
+.window-dot.maximize { background: #22c55e; }
+
+.window-container:hover .window-dot {
+  opacity: 1;
+}
+
+.window-title {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  font-weight: 500;
+  letter-spacing: 0.05em;
+}
+
+.window-status-led {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.7rem;
+  color: var(--status-available);
+}
+
+.window-status-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--status-available);
+  box-shadow: 0 0 8px var(--status-available);
+}
+
+.window-tabs {
+  display: flex;
+  background: rgba(3, 20, 39, 0.5);
+  border-bottom: 1px solid var(--border-color);
+  overflow-x: auto;
+}
+
+.window-tab {
+  padding: 10px 18px;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  background: transparent;
+  border-right: 1px solid var(--border-color);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: var(--transition-smooth);
+  user-select: none;
+}
+
+.window-tab.active {
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  border-bottom: 2px solid var(--accent-primary);
+}
+
+.window-tab:hover:not(.active) {
+  background: rgba(255, 255, 255, 0.02);
+  color: var(--text-primary);
+}
+
+.window-body {
+  flex-grow: 1;
+  padding: 20px;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  overflow-y: auto;
+  max-height: 350px;
+  background: rgba(3, 20, 39, 0.25);
+  text-align: left;
+}
+
+/* Syntax Highlighting */
+.code-line {
+  margin-bottom: 4px;
+  white-space: pre-wrap;
+}
+
+.code-indent {
+  padding-left: 20px;
+}
+
+.code-indent-2 {
+  padding-left: 40px;
+}
+
+.token-comment { color: var(--text-muted); font-style: italic; }
+.token-key { color: #f97316; } /* Orange */
+.token-string { color: #10b981; } /* Green */
+.token-boolean { color: #3b82f6; } /* Blue */
+.token-number { color: #ec4899; } /* Pink */
+.token-keyword { color: #8b5cf6; } /* Purple */
+.token-punctuation { color: var(--text-secondary); }
+
+/* Terminal Simulation styles */
+.terminal-output {
+  color: #10b981;
+}
+
+.terminal-prompt {
+  color: var(--text-primary);
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.terminal-cursor {
+  display: inline-block;
+  width: 8px;
+  height: 15px;
+  background: var(--accent-primary);
+  animation: blink 1s step-end infinite;
+  vertical-align: middle;
+}
+
+.terminal-run-btn {
+  margin-top: 16px;
+  padding: 6px 12px;
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-sm);
+  color: var(--accent-primary);
+  font-size: 0.75rem;
+  font-family: inherit;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+
+.terminal-run-btn:hover {
+  background: var(--accent-glow);
+  border-color: var(--accent-primary);
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+@media (max-width: 480px) {
+  .window-container {
+    min-height: 320px;
+  }
+  .window-tab {
+    padding: 8px 12px;
+    font-size: 0.75rem;
+  }
+  .window-body {
+    font-size: 0.75rem;
+  }
+}
