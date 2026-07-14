@@ -155,3 +155,9 @@
     font-size: 1.25rem;
   }
 }
+
+@media (max-width: 480px) {
+  .timeline-card {
+    padding: 16px;
+  }
+}

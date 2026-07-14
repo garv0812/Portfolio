@@ -102,3 +102,9 @@
     padding: 24px;
   }
 }
+
+@media (max-width: 480px) {
+  .skills-card {
+    padding: 16px;
+  }
+}

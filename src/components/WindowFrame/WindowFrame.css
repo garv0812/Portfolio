@@ -147,6 +147,8 @@
   display: flex;
   align-items: center;
   gap: 8px;
+  flex-wrap: wrap;
+  word-break: break-all;
 }
 
 .terminal-cursor {
@@ -190,5 +192,11 @@
   }
   .window-body {
     font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .window-status-led {
+    display: none;
   }
 }

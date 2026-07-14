@@ -33,6 +33,8 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  width: 100%;
+  min-width: 0;
 }
 
 .featured-tag {
@@ -291,5 +293,29 @@
   .featured-stats {
     flex-direction: column;
     gap: 12px;
+  }
+  .featured-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+  .featured-actions .btn-primary,
+  .featured-actions .btn-secondary {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .featured-project-card {
+    padding: 16px;
+  }
+  .featured-title {
+    font-size: 1.6rem;
+  }
+  .featured-schematic {
+    padding: 16px 12px;
+  }
+  .project-card {
+    padding: 16px;
   }
 }

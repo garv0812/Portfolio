@@ -21,6 +21,8 @@
   flex-direction: column;
   align-items: flex-start;
   z-index: 2;
+  width: 100%;
+  min-width: 0;
 }
 
 /* Status indicator available for projects */
@@ -38,6 +40,8 @@
   color: var(--text-primary);
   margin-bottom: 24px;
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .status-dot {
@@ -177,6 +181,8 @@
   justify-content: center;
   align-items: center;
   z-index: 2;
+  width: 100%;
+  min-width: 0;
 }
 
 @media (max-width: 968px) {
@@ -196,7 +202,7 @@
   
   .hero-section {
     min-height: auto;
-    padding: 120px 0 60px 0;
+    padding: 100px 24px 40px 24px;
   }
 }
 
@@ -204,11 +210,24 @@
   .hero-title {
     font-size: 2.3rem;
   }
+  .hero-section {
+    padding: 85px 16px 40px 16px;
+  }
   .hero-buttons {
     width: 100%;
   }
   .btn-primary, .btn-secondary {
     width: 100%;
     justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 1.85rem;
+  }
+  .hero-subtitle {
+    font-size: 1rem;
+    margin-bottom: 24px;
   }
 }

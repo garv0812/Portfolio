@@ -13,6 +13,8 @@ html {
   font-size: 16px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  width: 100%;
 }
 
 body {
@@ -21,7 +23,13 @@ body {
   color: var(--text-primary);
   line-height: 1.6;
   overflow-x: hidden;
+  width: 100%;
   transition: var(--transition-smooth);
+}
+
+main {
+  width: 100%;
+  overflow-x: hidden;
 }
 
 /* Background Technical Grid and Ambient Glows */
@@ -35,6 +43,8 @@ body {
   background-size: 50px 50px;
   background-position: center top;
   transition: var(--transition-smooth);
+  overflow-x: hidden;
+  width: 100%;
 }
 
 /* Radial Ambient Glows for Synthetic Logic Aesthetic */
@@ -182,5 +192,8 @@ a:focus-visible, button:focus-visible {
 @media (max-width: 768px) {
   body {
     padding-bottom: 90px;
+  }
+  .ambient-glow-1, .ambient-glow-2 {
+    display: none;
   }
 }
