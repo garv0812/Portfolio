@@ -108,8 +108,8 @@ export const projects = {
       { label: "API Handlers", value: "DRF Endpoints" }
     ],
     tech: ["Django", "React.js", "Django REST Framework", "SQL Server", "CSS3", "SCSS"],
-    githubUrl: "https://github.com/garv0812",
-    demoUrl: "https://github.com/garv0812"
+    // githubUrl: "https://github.com/garv0812",
+    // demoUrl: "https://github.com/garv0812"
   },
   secondary: [
     {
@@ -117,35 +117,35 @@ export const projects = {
       description: "A premium, role-based CRM opportunity tracking suite. Features dynamic sales sparkline charts, CSS status funnels, real-time Kanban pipeline drag/drops, live chat messaging threads with auto-replies, task checklists, and an inventory catalog.",
       tech: ["React.js", "Zustand", "Sass", "Recharts", "Local Storage DB"],
       githubUrl: "https://github.com/garv0812/ProCRM.git",
-      demoUrl: "https://pro-crm-nu.vercel.app/login"
+      demoUrl: "https://pro-crm-nu.vercel.app"
     },
-    {
-      title: "HR Recruitment Automation (ATS)",
-      description: "Automated candidate pipeline reporting and tracking boards for recruitment candidate statuses, streamlining HR flows.",
-      tech: ["Python", "Flask", "MySQL", "CSS3"],
-      githubUrl: "https://github.com/garv0812",
-      demoUrl: "https://github.com/garv0812"
-    },
-    {
-      title: "Enterprise HRMS Payroll Core",
-      description: "A robust Human Resource Management System backend processing attendance parameters and core payroll metrics.",
-      tech: ["C#", ".NET Core Web API", "SQL Server"],
-      githubUrl: "https://github.com/garv0812",
-      demoUrl: "https://github.com/garv0812"
-    },
-    {
-      title: "B2B E-commerce Engine",
-      description: "Optimized database design and query handling for high-volume B2B e-commerce platform components.",
-      tech: ["Python", "Django", "React", "MySQL"],
-      githubUrl: "https://github.com/garv0812",
-      demoUrl: "https://github.com/garv0812"
-    },
-    {
-      title: "AI-Assisted Prototyping Scripting",
-      description: "Automation shell and API scripting workflows integrating advanced LLM systems for rapid debugging and code optimization.",
-      tech: ["Python", "OpenAI API", "Bash", "Markdown"],
-      githubUrl: "https://github.com/garv0812",
-      demoUrl: "https://github.com/garv0812"
-    }
+    // {
+    //   title: "HR Recruitment Automation (ATS)",
+    //   description: "Automated candidate pipeline reporting and tracking boards for recruitment candidate statuses, streamlining HR flows.",
+    //   tech: ["Python", "Flask", "MySQL", "CSS3"],
+    //   githubUrl: "https://github.com/garv0812",
+    //   demoUrl: "https://github.com/garv0812"
+    // },
+    // {
+    //   title: "Enterprise HRMS Payroll Core",
+    //   description: "A robust Human Resource Management System backend processing attendance parameters and core payroll metrics.",
+    //   tech: ["C#", ".NET Core Web API", "SQL Server"],
+    //   githubUrl: "https://github.com/garv0812",
+    //   demoUrl: "https://github.com/garv0812"
+    // },
+    // {
+    //   title: "B2B E-commerce Engine",
+    //   description: "Optimized database design and query handling for high-volume B2B e-commerce platform components.",
+    //   tech: ["Python", "Django", "React", "MySQL"],
+    //   githubUrl: "https://github.com/garv0812",
+    //   demoUrl: "https://github.com/garv0812"
+    // },
+    // {
+    //   title: "AI-Assisted Prototyping Scripting",
+    //   description: "Automation shell and API scripting workflows integrating advanced LLM systems for rapid debugging and code optimization.",
+    //   tech: ["Python", "OpenAI API", "Bash", "Markdown"],
+    //   githubUrl: "https://github.com/garv0812",
+    //   demoUrl: "https://github.com/garv0812"
+    // }
   ]
 };
