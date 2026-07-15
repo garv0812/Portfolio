@@ -117,7 +117,7 @@ export const projects = {
       description: "A premium, role-based CRM opportunity tracking suite. Features dynamic sales sparkline charts, CSS status funnels, real-time Kanban pipeline drag/drops, live chat messaging threads with auto-replies, task checklists, and an inventory catalog.",
       tech: ["React.js", "Zustand", "Sass", "Recharts", "Local Storage DB"],
       githubUrl: "https://github.com/garv0812/ProCRM.git",
-      demoUrl: "https://pro-crm-nu.vercel.app/calendar"
+      demoUrl: "https://pro-crm-nu.vercel.app/login"
     },
     {
       title: "HR Recruitment Automation (ATS)",
